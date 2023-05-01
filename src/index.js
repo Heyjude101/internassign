@@ -13,8 +13,12 @@ root.render(
       domain= {process.env.REACT_APP_DOMAIN}
       clientId={process.env.REACT_APP_CLIENT}
       authorizationParams={{
-        redirect_uri: window.location.origin,
+      redirect_uri: window.location.origin,
+      audience : "internassignapi",
       }}
+      redirect_uri =  {window.location.origin}
+      
+      scope="openid profile email"
     >
       <App />
     </Auth0Provider>
