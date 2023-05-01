@@ -7,16 +7,14 @@ import swal from 'sweetalert';
 
 export const Navbarr = () => {
   const {loginWithPopup, isAuthenticated, logout , getAccessTokenSilently } = useAuth0();
-
-  
-
+  const BASE_BACKEND = "https://backendserver-msgn.onrender.com/"
     async function callApi (){
     try {
       const accessToken = await getAccessTokenSilently({
         audience: 'internassignapi'
       });
       // console.log(accessToken);
-      const response = await axios.get('http://localhost:4000/private' , {
+      const response = await axios.get(`${BASE_BACKEND}private` , {
         headers :{
           authorization: 'Bearer ' + accessToken
         },

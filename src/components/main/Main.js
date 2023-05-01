@@ -14,10 +14,6 @@ export const Main = () => {
         }
         <br></br>
         <TextareaPage/>
-
-        
-        
-        
       </div>
     </>
   );

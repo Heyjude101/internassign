@@ -12,7 +12,7 @@ const TextareaPage = () => {
       <div className="input-group-prepend">
       </div>
       <textarea
-        disabled = {isAuthenticated? false: true}
+        disabled = {true}
         className="form-control"
         id="exampleFormControlTextarea1"
         rows="5"
